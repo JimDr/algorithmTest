@@ -1,7 +1,7 @@
 package com.duanmin.algorithmTest;
 /*
  * 1.实现一个特殊的栈，在实现栈的基本功能的基础上，再实现返回栈中最小元素的操作
- *	pop push getmin操作的时间复杂度都是O(1)
+ *	pop push getmin操作的时间复杂度都是O(1).....
  *
  * make a special Integer stack,as same as basic stack
  * need function pop push getMin,the time complexity of the three functions is O(1)
