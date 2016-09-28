@@ -3,11 +3,21 @@ package com.duanmin.algorithmTest;
 import org.junit.Test;
 
 public class ReverseStackTest {
-	@Test
+	ReverseStack mytest = new ReverseStack();
+	//@Test
 	public void reverseStackTest(){
-		ReverseStack mytest = new ReverseStack();
 		System.out.println(mytest.add(5));
 		
 	}
+	
+	@Test
+	public void MultiplicationTest(){
+		System.out.println(mytest.multiplication(7));
 		
+	}
+	
+	@Test
+	public void multiplicationWithAddTest(){
+		mytest.run(7);
+	}
 }

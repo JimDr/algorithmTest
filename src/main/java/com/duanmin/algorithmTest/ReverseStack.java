@@ -20,8 +20,60 @@ public class ReverseStack {
 		
 	}	
 	///计算 1*2*3*4*。。。*n，传入n
-	public int Multiplication(int num){
-		return 0;
+	public int multiplication(int num){
+		if((num==1)||(num==2)){
+			return num;
+		}else{
+			return num*multiplication(num-1);
+		}
+		
+		//return 0;
 		
 	}
+	
+	
+	/*计算 1*2*3*4*。。。*n，传入n
+	 * 
+	 * 计算n!通过（n-1）!加n次的办法
+	 * 
+	 * 
+	 * 
+	 */
+	public int multiplicationWithAdd(int num){
+			int i = 0;
+			int ret = 0;
+			int total = 0;
+			if(num == 1){
+				return 1;
+			}
+			ret = multiplicationWithAdd(num-1);
+			for(i=num;i>0;i--){
+				total=total+ret;				
+			}
+			System.out.println(total);
+			return total;
+		}
+		
+	
+		//return 0;
+	public void showNum(int num){
+		int i = 0;
+		for(i=1;i<=num;i++){
+			System.out.print(i);
+			if(i==num){
+				break;
+			}else{
+				System.out.print("*");
+			}		
+		}
+		System.out.print("=");
+	}
+	public void run(int num){
+		//showNum(num);
+		int ret = multiplicationWithAdd(num);
+		System.out.println("ret = "+ret);
+		System.out.println("==========================");
+		
+	}
+	
 }
