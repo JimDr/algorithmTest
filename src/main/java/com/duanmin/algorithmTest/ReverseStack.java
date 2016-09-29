@@ -6,6 +6,7 @@ package com.duanmin.algorithmTest;
  * 
  * */
 
+import java.util.Stack;
 
 //first ,test recursive
 public class ReverseStack {
@@ -75,5 +76,40 @@ public class ReverseStack {
 		System.out.println("==========================");
 		
 	}
+	
+	
+	public Integer getBottomNumber(Stack<Integer> basicStack){
+		Integer ret = 0;
+		Integer last = 0;
+		ret = basicStack.pop();
+		if(basicStack.isEmpty()){
+			return ret;
+		}else{
+			last = getBottomNumber(basicStack);
+			basicStack.push(ret);
+			return last;
+		}
+		
+	}
+	
+	public void reversed(Stack<Integer> basicStack){
+		Integer bottomNumber = 0;	
+		bottomNumber = getBottomNumber(basicStack);
+		if(basicStack.isEmpty()){
+			basicStack.push(bottomNumber);
+			return;
+		}else{
+			reversed(basicStack);
+			basicStack.push(bottomNumber);
+			return;
+		}
+		
+	}
+	
+	
+	
+	
+	
+	
 	
 }

@@ -1,5 +1,7 @@
 package com.duanmin.algorithmTest;
 
+import java.util.Stack;
+
 import org.junit.Test;
 
 public class ReverseStackTest {
@@ -10,7 +12,7 @@ public class ReverseStackTest {
 		
 	}
 	
-	@Test
+	//@Test
 	public void MultiplicationTest(){
 		System.out.println(mytest.multiplication(7));
 		
@@ -18,6 +20,15 @@ public class ReverseStackTest {
 	
 	@Test
 	public void multiplicationWithAddTest(){
-		mytest.run(7);
+		Stack<Integer> basicStack = new Stack<Integer>();
+		basicStack.push(1);
+		basicStack.push(2);
+		basicStack.push(3);
+		basicStack.push(4);
+		basicStack.push(5);
+		mytest.reversed(basicStack);
+		while(!basicStack.isEmpty()){
+			System.out.println(basicStack.pop());
+		}
 	}
 }
